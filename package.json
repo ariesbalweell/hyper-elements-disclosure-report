@@ -1,0 +1,30 @@
+{
+  "name": "disclosure-report",
+  "version": "1.0.0",
+  "description": "Disclosure Report — a bug-bounty vulnerability report kit (PDF + delivery email) built with Hyper Elements. Sample data is fictional.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsx scripts/build.tsx",
+    "check": "npx hyper-elements check src/report.tsx src/email.tsx",
+    "render": "npx hyper-elements render src/email.tsx --out out/cli",
+    "preview": "npx hyper-elements preview src/email.tsx --out out/cli-clients",
+    "shots": "tsx scripts/screenshot.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hyper-elements/react": "^0.4.6",
+    "@react-pdf/renderer": "^4.9.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@hyper-elements/cli": "^0.2.10",
+    "@hyper-elements/email-clients": "^0.4.16",
+    "@hyper-elements/lint": "^0.1.7",
+    "playwright": "^1.65.1",
+    "tsx": "^4.23.15"
+  },
+  "type": "module"
+}
